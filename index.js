@@ -149,4 +149,4 @@ function watch(config = {}) {
   });
 }
 
-module.exports = { watch };
+module.exports = { scss };
