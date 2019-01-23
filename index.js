@@ -53,7 +53,8 @@ function getProjectPath(ext) {
   const config = Config.sfdx.exists && JSON.parse(readFileSync(Config.sfdx.path, 'utf8'));
   const packageDirectories = config && config.packageDirectories;
   const withExt = (path) => './' + path + (ext ? '/**/*.' + ext : '/**/*');
-
+  console.log(config);
+  console.log(packageDirectories);
   if (config && packageDirectories) {
     const packages = packageDirectories.map(pack => pack.path);
     const paths = packages.map(withExt);
